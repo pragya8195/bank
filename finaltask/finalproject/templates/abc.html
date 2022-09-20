@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block body %}
+<form action="abc" method="post">
+    {% csrf_token %}
+login success<br>
+
+<!--<a  href="{% url 'finalapp:details' %}">-->
+<!--    enter details-->
+<!--</a>-->
+    <a class="btn btn-warning" href="{% url 'finalapp:details'  %}">details</a>
+</form>
+{% endblock %}

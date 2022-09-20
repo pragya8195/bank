@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<form action="details"  method="POST">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="enter name"><br>
+    <input type="date" name="date_of_birth" placeholder="enter date of birth"><br>
+    <input type="number" name="age" placeholder="enter age"><br>
+    <input type="text" name="gender" placeholder="enter gender"><br>
+    <input type="number" name="phone_number" placeholder="enter phone number"><br>
+    <input type="email" name="email" placeholder="enter email"><br>
+    <input type="text" name="address" placeholder="enter address"><br>
+    <div class="form-group col-md-3">
+    <label for="input district">district</label>
+    <select class="form-control" id="input district">
+        <option value="select district">select district</option>
+        <option value="alappuzha">alappuzha</option>
+        <option value="ernakulam">ernakulam</option>
+        <option value="idukki">idukki</option>
+        <option value="kannur">kannur</option>
+        <option value="kasargod">kasargod</option>
+        <option value="kollam">kollam</option>
+        <option value="kozhikode">kozhikode</option>
+        <option value="kottayam">kottayam</option>
+        <option value="malappuram">malappuram</option>
+        <option value="palakkad">palakkad</option>
+        <option value="pathanamthitta">pathanamthitta</option>
+        <option value="thiruvananthapuram">thiruvananthapuram</option>
+        <option value="thrissur">thrissur</option>
+        <option value="wayanad">wayanad</option>
+
+    </select><br>
+    </div>
+
+    <div class="form-group col-md-3">
+    <label for="input zone">zone</label>
+    <select class="form-control" id="input zone">
+        <option value="select zone">select zone</option>
+        <option value="cherthala">cherthala</option>
+        <option value="haripad">haripad</option>
+        <option value="aluva">aluva</option>
+        <option value="edappally">edappally</option>
+        <option value="thodupuzha">thodupuzha</option>
+        <option value="devikulam">devikulam</option>
+        <option value="payyanur">payyanur</option>
+        <option value="iritty">iritty</option>
+        <option value="kanhangad">kanhangad</option>
+        <option value="nileshwar">nileshwar</option>
+        <option value="thirumullavaram">thirumullavaram</option>
+        <option value="karunagapally">karunagapally</option>
+        <option value="beypore">beypore</option>
+        <option value="feroke">feroke</option>
+        <option value="pala">pala</option>
+        <option value="vaikom">vaikom</option>
+        <option value="manjeri">manjeri</option>
+        <option value="ponnani">ponnani</option>
+        <option value="kuzhalmannam">palakkad</option>
+        <option value="pattambi">pattambi</option>
+        <option value="adoor">adoor</option>
+        <option value="ranni">ranni</option>
+        <option value="attingal">attingal</option>
+        <option value="neyyatinkara">neyyatinkara</option>
+        <option value="chalakkudy">chalakkudy</option>
+        <option value="irinjalakuda">irinjalakuda</option>
+        <option value="mananthavady">mananthavadi</option>
+        <option value="kalpetta">kalpetta</option>
+    </select><br>
+    </div>
+
+
+
+    <div class="form-group col-md-3">
+    <label for="input account_type">account_type</label>
+    <select class="form-control" id="input account_type">
+        <option value="select account_type">select account_type</option>
+        <option value="savings">savings</option>
+        <option value="current">current</option>
+        <option value="joint">joint</option>
+        <option value="salary">salary</option>
+    </select><br>
+    </div>
+
+    <div>
+    <label for="input materials_required">materials required</label><br>
+
+    <input type="checkbox" value="credit_card"> credit card<br>
+
+        <input type="checkbox" value="debit_card"> debit card<br>
+        <input type="checkbox" value="online_banking"> online banking<br>
+        <input type="checkbox" value="cheque_book"> cheque book<br>
+    </label><br>
+
+    </div>
+
+    <a class="btn btn-warning" href="{% url 'finalapp:final'  %}">submit</a><br>
+    <a class="btn btn-danger" href="{% url 'finalapp:home'  %}">logout</a>
+</form>
+
+{% endblock  %}
